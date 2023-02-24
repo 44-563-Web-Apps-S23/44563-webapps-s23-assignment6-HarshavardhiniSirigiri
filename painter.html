@@ -6,16 +6,6 @@
 <body>
 
 <h2>Painter entry  Naga Harshavardhini Sirigiri</h2>
-
-<form>
-    <label for="form1_age">The hidden painter name</label>
-    <input type ="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
-
-    <label for="form1_nick">What is your nickname </label>
-    <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
-
-    <input type="button" onclick="resolveForm()" value="Get values from form">
-</form>
 <form>
     <label for="Password" class="form-label">The hidden painter name</label>
     <input type="password" class="form-control" id="Password" value="Monet"> <br>
@@ -37,13 +27,18 @@ function checkPainter(){
     console.log("Check the guess")
     password = document.getElementById("Password").value
     guess = document.getElementById("form1_guess").value
-    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    confirmed = confirm("Are these values matched "+password+" and "+guess)
     
     out = document.getElementById("result")
-    if(confirmed){
-        out.innerHTML = "Values were confirmed"
+    if(password==guess){
+        alert("You got it right");
+        good=good+1
+        out.innerHTML = "Correct answer: "+ good +"Wrong answer: " + oops;
+
     } else {
-        out.innerHTML = "Values were not confirmed"
+        alert("Sorry");
+        oops=oops+1
+        out.innerHTML = "Correct answer: "+ good +"Wrong answer: " + oops;
     }
 }
 </script>
