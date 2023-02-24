@@ -8,24 +8,35 @@
 <h2>Painter entry  Naga Harshavardhini Sirigiri</h2>
 
 <form>
-    <label for="form1_age">What is your age </label>
-    <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
+    <label for="form1_age">The hidden painter name</label>
+    <input type ="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
 
     <label for="form1_nick">What is your nickname </label>
     <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
 
     <input type="button" onclick="resolveForm()" value="Get values from form">
 </form>
+<form>
+    <label for="Password" class="form-label">The hidden painter name</label>
+    <input type="password" class="form-control" id="Password" value="Monet"> <br>
+
+    <label for="form1_guess">Guess the painter</label>
+    <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
+
+    <input type="button" onclick="checkPainter()" value="Check the guess">
+</form>
 
 
-<p id="result">This text will be replaced </p>
+<p id="result">The results will be displayed </p>
 
 <script> 
+var good =0;
+var oops =0;
 
-function resolveForm (){
-    console.log("Getting form values")
-    age = document.getElementById("form1_age").value
-    nick = document.getElementById("form1_nick").value
+function checkPainter(){
+    console.log("Check the guess")
+    password = document.getElementById("Password").value
+    guess = document.getElementById("form1_guess").value
     confirmed = confirm("Are these the values? "+age+" and "+nick)
     
     out = document.getElementById("result")
