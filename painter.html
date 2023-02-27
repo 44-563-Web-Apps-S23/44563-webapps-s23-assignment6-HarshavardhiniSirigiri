@@ -42,6 +42,37 @@ function checkPainter(){
     }
 }
 </script>
+<div class = "container">
+    <img src="geranium.jpg" class="img-fluid" alt="GERANIUM" height = 100 width = 100 >
+    <input type="button" onclick="selectImage()" value="selectImage()">
+</div>
+
+
+<script>
+   var useImage = 1;
+   function  selectImage(){
+    console.log(selectImage)
+    switch(useImage){
+        case 1:
+            <img src="geranium.jpg" class="img-fluid" alt="GERANIUM" height = "100px"  width = "100px" onclick="selectImage() "/>;
+            useImage+=1
+            
+        break;
+        case 2:
+            <img src="iris.jpg" class="img-thumbnail" alt="IRIS" height ="100px" width = "100px" onclick="selectImage()"/>;
+            useImage+=1
+        break;
+        case 3:
+            <img src="rainlily.jpg" class="img-thumbnail" alt="RAINLILLY" height = "100px" width = "100px" onclick="selectImage()"/>;
+            useImage+=1
+        break;  
+        default:
+        <img src="geranium.jpg" class="img-fluid" alt="GERANIUM" height = "100px"  width = "100px" onclick="selectImage() "/>;
+
+   }
+}
+</script>
+
 
 </body>
 </html> 
